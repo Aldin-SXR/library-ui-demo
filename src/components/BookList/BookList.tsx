@@ -1,20 +1,19 @@
-import React, { ChangeEvent, useEffect, useState } from 'react'
+import { ChangeEvent } from 'react'
 import { bookList } from '../../constants'
 import { Book } from '../../utils/types'
 import BookCard from '../BookCard'
-import { BookService } from '../../services'
+// import { BookService } from '../../services'
 import { useBooks } from '../../hooks'
 import useCreateBook from '../../hooks/useCreateBook'
 
-type Props = {}
 
-const BookList = (props: Props) => {
+const BookList = () => {
     const { data: books, isLoading, error } = useBooks()
     const createBook = useCreateBook()
 
     const search = (e: ChangeEvent<HTMLInputElement>) => {
         let filteredBooks = bookList.filter(book => book.title.toLowerCase().includes(e.target.value.toLowerCase()))
-        // setBooks(filteredBooks)
+        console.log(filteredBooks)
     }
 
     const addNewBook = () => {

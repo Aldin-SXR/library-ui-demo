@@ -1,4 +1,3 @@
-import React from 'react'
 import { useParams } from 'react-router-dom'
 import { bookList } from '../constants'
 import { Book } from '../utils/types'

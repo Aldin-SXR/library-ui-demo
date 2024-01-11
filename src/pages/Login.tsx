@@ -22,7 +22,7 @@ const schema = yup
   .required()
 
 
-const Login = (props: Props) => {
+const Login = ({}: Props) => {
   const { register, handleSubmit, formState: { errors } } = useForm<LoginFormData>({
     resolver: yupResolver(schema)
   })
