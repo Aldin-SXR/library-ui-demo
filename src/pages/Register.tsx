@@ -27,7 +27,7 @@ const schema = yup
     })
     .required()
 
-const Registration = (props: Props) => {
+const Registration = ({}: Props) => {
     const { register, handleSubmit, formState: { errors } } = useForm<RegisterFormData>({
         resolver: yupResolver(schema)
     })
